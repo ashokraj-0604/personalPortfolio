@@ -1,10 +1,10 @@
-// Toggle Menu for Mobile Navigation
 function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
-}
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+    const menuLinks = document.querySelector('.menu-links');
+  
+    hamburgerIcon.classList.toggle('open');
+    menuLinks.classList.toggle('open');
+  }   
 document.getElementById('contactForm').addEventListener('submit', function (event) {
   event.preventDefault(); // Prevent the default form submission
 

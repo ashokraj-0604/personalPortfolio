@@ -70,11 +70,13 @@ a:hover {
 
 #hamburger-nav {
   display: none;
+  position:relative;
 }
 
 .hamburger-menu {
-  position: relative;
-  display: inline-block;
+  position: absolute;
+  top: 10px; /* Adjust the top offset as needed */
+  right: 10px; /* Adjust the right offset as needed */
 }
 
 .hamburger-icon {
@@ -145,6 +147,16 @@ a:hover {
 .hamburger-icon span:first-child {
   transform: none;
 }
+
+@media (max-width: 768px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: block;
+  }
+}
+
 
 /* SECTIONS */
 
