@@ -36,7 +36,7 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: 0.5vh;
 }
 
 .nav-links {
@@ -647,6 +647,27 @@ footer p {
   }
 }
 
+.experience-details-container {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent items from wrapping */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 20px; /* Add some spacing between items */
+  padding: 10px; /* Add some padding around the container */
+}
+
+.details-container {
+  flex: 0 0 auto; /* Ensure each item stays its size and doesn't shrink */
+  width: 250px; /* Set a fixed width for the project items */
+  background: #f9f9f9; /* Optional: Add a background color */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for aesthetics */
+}
+
+.project-img {
+  width: 100%; /* Ensure project images fit their containers */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px 8px 0 0; /* Rounded corners for the top of the image */
+}
 
 .container {
   display: flex;
