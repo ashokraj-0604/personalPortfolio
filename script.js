@@ -4,8 +4,32 @@ function toggleMenu() {
   
     hamburgerIcon.classList.toggle('open');
     menuLinks.classList.toggle('open');
-  }   
-document.getElementById('contactForm').addEventListener('submit', function (event) {
+  }  
+  
+  const sliderContainer = document.querySelector('.slider-container');
+  const slides = document.querySelectorAll('.slide');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+
+  let currentIndex = 0;
+
+  const updateSlider = () => {
+    const slideWidth = slides[0].clientWidth;
+    sliderContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  };
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length; // Loop back to the first slide
+    updateSlider();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Loop back to the last slide
+    updateSlider();
+  });
+
+  window.addEventListener('resize', updateSlider); // Adjust slider on window resize
+  document.getElementById('contactForm').addEventListener('submit', function (event) {
   event.preventDefault(); // Prevent the default form submission
 
   // Check if the form is already being submitted
