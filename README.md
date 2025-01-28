@@ -1,4 +1,4 @@
-# Personal portfolio project
+# Personal portfolio website
 
 This is an interactive web project featuring a responsive navigation menu, a functional slider, and a contact form integrated with **EmailJS** for seamless email submissions.
 
