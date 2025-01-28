@@ -71,5 +71,3 @@ function toggleMenu() {
           submitButton.disabled = false;
       });
 });
-
-
